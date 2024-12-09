@@ -62,7 +62,7 @@ greet("Hello", "Alice", "Bob", "Charlie");
 
 function sumMyNumbers(...$x) {
     $n = 0;
-    $len = count($x);
+    $len = count($x); //determines how many arguments were passed
     for ($i = 0; $i < $len; $i++) {
         $n += $x[$i];
     }
