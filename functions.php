@@ -42,4 +42,32 @@ echo "Outside function: $num";
 
 
 
+//Variadic Function in PHP
+
+<?php
+
+function greet($greeting, ...$names) {
+    foreach ($names as $name) {
+        echo "$greeting, $name!<br>";
+    }
+}
+
+greet("Hello", "Alice", "Bob", "Charlie");
+
+?>
+
+//example 2 of variadic function
+
+<?php
+
+function sumMyNumbers(...$x) {
+    $n = 0;
+    $len = count($x);
+    for ($i = 0; $i < $len; $i++) {
+        $n += $x[$i];
+    }
+    return $n;
+}
+
+?>
 
